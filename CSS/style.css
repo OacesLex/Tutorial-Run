@@ -1,0 +1,159 @@
+
+/*Primary
+
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+
+Neutral
+
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    min-height: 100vh;
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: hsl(225, 100%, 94%);
+    position: relative;
+    font-size: 16px;
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 20px 20px hsl(255, 3%, 71%);
+}
+
+.text-content{
+    padding: 30px;
+    text-align: center;
+}
+
+.title{
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.text-content p.subtitle {
+    margin-bottom: 25px;
+    color: gray;
+}
+
+.pay-box{
+    background: hsl(225, 100%, 98%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.pay-box a:hover{
+    color: hsl(245, 61%, 33%);
+    transition: background color .3s ease;
+    text-decoration: none;
+}
+
+.pay-box-left{
+    align-items: center;
+    text-align: left;
+    display: flex;
+}
+
+.pay-box-left div {
+    margin-left: 20px;
+}
+
+.pay-box-left div h5 {
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.pay-box-left div p{
+    color: gray;
+    font-size: 13px;
+}
+ 
+.pay-box a {
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+}
+
+a.proceed-btn{
+    display: block;
+    color: white;
+    background: hsl(245, 61%, 33%);
+    padding: 20px 0;
+    margin: 30px 0;
+    text-decoration: none;
+    border-radius: 12px;
+    box-shadow: 0px 20px 20px hsl(248, 23%, 74%);
+
+}
+
+a.proceed-btn:hover{
+background: hsl(224, 23%, 55%);
+transition: background color .5s ease;
+}
+
+a.cancel-btn{
+    color: hsl(224, 23%, 55%);
+    text-decoration: none;
+}
+
+a.cancel-btn:hover{
+    color: hsl(245, 61%, 33%);
+    transition: color .3s ease;
+}
+
+@media only screen and (max-width: 425px) {
+    body{
+        background-image: url(/images/pattern-background-mobile.svg);
+        font-size: 16px;
+    }
+    
+    div.hero img {
+        align-items: center;
+    }
+    .container{
+        max-width: 85%;
+        align-items: center;
+    }
+
+    .title{
+        font-size: 23px;
+    }
+
+    div.pay-box {
+        padding: 10px;
+    }
+
+    .pay-box-left div{
+        margin: 10px;
+    }
+
+    .pay-box-left a,
+    a.proceed-btn,
+    a.cancel-btn {
+        font-size: 12px;
+    }
+}
